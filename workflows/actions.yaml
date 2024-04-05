@@ -1,0 +1,31 @@
+name: Insert Expression Example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set environment variables
+      run: |
+        echo "IMAGE_NAME=my-image" >> $GITHUB_ENV
+        echo "VERSION=1.0.0" >> $GITHUB_ENV
+
+    - name: Insert values dynamically
+      run: |
+        echo "Inserting values dynamically"
+        echo "My image name is: $IMAGE_NAME"
+        echo "My version is: $VERSION"
+
+    - name: Store inserted values for later use
+      id: store-inserted-values
+      run: echo "Inserted image name is $IMAGE_NAME and version is $VERSION" 
+      
+    - name: Use inserted values
+      env:
+        ${{ insert }}: ${{ steps.store-inserted-values }}
+  
