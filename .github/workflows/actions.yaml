@@ -28,4 +28,5 @@ jobs:
     - name: Use inserted values
       env:
         ${{ insert }}: ${{ steps.store-inserted-values }}
-  
+      run:
+        echo Hello World!
