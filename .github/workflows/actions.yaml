@@ -27,6 +27,6 @@ jobs:
       
     - name: Use inserted values
       env:
-        ${{ insert }}: ${{ steps.store-inserted-values }}
+        age: ${{ 27 + 1 }}
       run:
         echo Hello World!
