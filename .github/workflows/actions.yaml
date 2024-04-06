@@ -27,6 +27,6 @@ jobs:
       
     - name: Use inserted values
       env:
-        age: ${{ 27 + 1 }}
+        age: ${{ 27+1 }}
       run:
         echo Hello World!
