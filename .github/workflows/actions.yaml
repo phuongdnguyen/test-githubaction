@@ -27,6 +27,6 @@ jobs:
       
     - name: Use inserted values
       env:
-        age: ${{ (42 == '42' }}
+        age: ${{ (42 == '42') }}
       run:
         echo Hello World!
