@@ -28,5 +28,7 @@ jobs:
     - name: Use inserted values
       env:
         age: ${{ (42 == '42') }}
+        p: Mona the Octocat
       run:
         echo ${{ env.age }}
+        echo ${{ env.p }}
