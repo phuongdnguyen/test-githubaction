@@ -31,5 +31,6 @@ jobs:
         p: Mona the Octocat
         k: ${{ !(1 != 1) }}
         v: ${{ 1 + 1 }}
+        m: ${{ v }}
       run:
         echo ${{ env.v }}
