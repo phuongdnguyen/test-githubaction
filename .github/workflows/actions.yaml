@@ -1,11 +1,14 @@
 name: Insert Expression Example
 
 on: [push]
-
+env:
+  foo: bar
+  
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env: 
+      abc: xyz
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -30,6 +33,8 @@ jobs:
         age: ${{ (42 == '42') }}
         p: Mona the Octocat
         k: ${{ !(1 != 1) }}
-        m: ${{ env.k }}
+        mFoo: ${{ env.foo }}
+        mAbc: ${{ env.abc }}
       run:
-        echo ${{ env.m }}
+        echo ${{ env.mFoo }}
+        echo ${{ env.mAbc }}
