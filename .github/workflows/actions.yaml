@@ -33,7 +33,7 @@ jobs:
         age: ${{ (42 == '42') }}
         p: Mona the Octocat
         k: ${{ !(1 != 1) }}
-        mFoo: ${{ k }}
+        mFoo: ${{ env.k }}
         mAbc: ${{ env.abc }}
       run:
         echo ${{ env.mFoo }}
