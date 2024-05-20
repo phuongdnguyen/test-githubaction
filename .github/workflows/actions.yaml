@@ -38,3 +38,4 @@ jobs:
         json1: ${{ fromJSON('[0,1]')[1] }}
       run:
         echo ${{ env.json1 }}
+        echo ${{ true >= true }}
