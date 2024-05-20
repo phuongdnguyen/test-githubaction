@@ -35,6 +35,6 @@ jobs:
         k: ${{ !(1 != 1) }}
         mFoo: ${{ env.k }}
         mAbc: ${{ env.abc }}
-        json1: fromJSON('[0,1]')[1]
+        json1: ${{ fromJSON('[0,1]')[1] }}
       run:
         echo ${{ env.json1 }}
