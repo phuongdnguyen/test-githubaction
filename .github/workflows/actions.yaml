@@ -40,3 +40,4 @@ jobs:
         # echo ${{ env.json1 }}
         # echo ${{ true >= true }}
         echo ${{ cOnTaInS('Hello', 'll') }}
+        echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
