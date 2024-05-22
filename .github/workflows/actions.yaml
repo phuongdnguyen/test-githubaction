@@ -42,4 +42,5 @@ jobs:
         # echo ${{ cOnTaInS('Hello', 'll') }}
         # echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
         # echo ${{ format('{0', '{1}', 'World') }} 
-        echo ${{ 9223372036854775807 }}
+        # echo ${{ 9223372036854775807 }}
+        echo ${{ true && 0.0 }}
