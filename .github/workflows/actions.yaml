@@ -45,4 +45,5 @@ jobs:
         # echo ${{ 9223372036854775807 }}
         echo ${{ true && 0.0 }}
         echo ${{ true && 10.0 }}
+        echo ${{ 10.0 }}
         # echo ${{ true && NaN }}
