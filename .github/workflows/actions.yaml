@@ -49,4 +49,5 @@ jobs:
         # echo ${{ true && NaN }}
         # echo ${{ true && 0.0 }} 
         # echo ${{ env.nonascii }}
-        echo ${{ true && 10.0 }}
+        # echo ${{ true && 10.0 }}
+        echo ${{ contains(fromJSON('[null,"second"]'), '') }}
