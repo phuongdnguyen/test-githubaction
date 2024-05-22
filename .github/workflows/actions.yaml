@@ -47,4 +47,5 @@ jobs:
         # echo ${{ true && 10.0 }}
         # echo ${{ 10.0 }}
         # echo ${{ true && NaN }}
-        echo ${{ true && 0.0 }} 
+        # echo ${{ true && 0.0 }} 
+        echo ${{ 'こんにちは＼(^o^)／世界😊' }}
