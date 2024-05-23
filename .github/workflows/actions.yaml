@@ -51,4 +51,5 @@ jobs:
         # echo ${{ env.nonascii }}
         # echo ${{ true && 10.0 }}
         # echo ${{ contains(fromJSON('[null,"second"]'), '') }}
-        echo ${{ contains('123', '') }}
+        # echo ${{ contains('123', '') }}
+        echo ${{ 1234567890.0 }}
