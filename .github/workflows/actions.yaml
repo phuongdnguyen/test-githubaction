@@ -61,3 +61,4 @@ jobs:
         # echo ${{ true && 10.0 }}
         # echo ${{ contains(fromJSON('[null,"second"]'), '') }}
         # echo ${{ contains('123', '') }}
+        echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
