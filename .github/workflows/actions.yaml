@@ -12,53 +12,54 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+    - run: echo "::add-matcher::matcher.json"
+    - run: echo "::add-matcher::matcher.json"
+    # - name: Set environment variables
+    #   run: |
+    #     echo "IMAGE_NAME=my-image" >> $GITHUB_ENV
+    #     echo "VERSION=1.0.0" >> $GITHUB_ENV
 
-    - name: Set environment variables
-      run: |
-        echo "IMAGE_NAME=my-image" >> $GITHUB_ENV
-        echo "VERSION=1.0.0" >> $GITHUB_ENV
+    # - name: Insert values dynamically
+    #   run: |
+    #     echo "Inserting values dynamically"
+    #     echo "My image name is: $IMAGE_NAME"
+    #     echo "My version is: $VERSION"
 
-    - name: Insert values dynamically
-      run: |
-        echo "Inserting values dynamically"
-        echo "My image name is: $IMAGE_NAME"
-        echo "My version is: $VERSION"
-
-    - name: Store inserted values for later use
-      id: store-inserted-values
-      run: echo "Inserted image name is $IMAGE_NAME and version is $VERSION" 
+    # - name: Store inserted values for later use
+    #   id: store-inserted-values
+    #   run: echo "Inserted image name is $IMAGE_NAME and version is $VERSION" 
       
-    - name: Use inserted values
-      env:
-        age: ${{ (42 == '42') }}
-        p: Mona the Octocat
-        k: ${{ !(1 != 1) }}
-        mFoo: ${{ env.k }}
-        mAbc: ${{ env.abc }}
-        json1: ${{ fromJSON('[0,1]')[1] }}
-        # nonascii: ${{ 'こんにちは＼(^o^)／世界😊' }}
-      run:
-        # echo ${{ env.json1 }}
-        # echo ${{ true >= true }}
-        # echo ${{ cOnTaInS('Hello', 'll') }}
-        # echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
-        # echo ${{ format('{0', '{1}', 'World') }} 
-        # echo ${{ 9223372036854775807 }}
-        # echo ${{ 2147483647 }}
-        # echo ${{ 12345678901234567890.0 }}
-        # echo ${{ 1e3 }}
-        # echo ${{ 12e3 }}
-        # echo ${{ 0e3 }}
-        # echo ${{ format('{0} {1} {2} {3}', 1.0, 1.1, 1234567890.0, 12345678901234567890.0) }}
-        # echo ${{ 9223372036854775807 }}
-        # echo ${{ 0.0 }}
-        # echo ${{ true && 0.0 }}
-        # echo ${{ 10.0 }}
-        # echo ${{ 0.0 }}
-        # echo ${{ true && NaN }}
-        # echo ${{ true && 0.0 }} 
-        # echo ${{ env.nonascii }}
-        # echo ${{ true && 10.0 }}
-        # echo ${{ contains(fromJSON('[null,"second"]'), '') }}
-        # echo ${{ contains('123', '') }}
-        echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
+    # - name: Use inserted values
+    #   env:
+    #     age: ${{ (42 == '42') }}
+    #     p: Mona the Octocat
+    #     k: ${{ !(1 != 1) }}
+    #     mFoo: ${{ env.k }}
+    #     mAbc: ${{ env.abc }}
+    #     json1: ${{ fromJSON('[0,1]')[1] }}
+    #     # nonascii: ${{ 'こんにちは＼(^o^)／世界😊' }}
+    #   run:
+    #     # echo ${{ env.json1 }}
+    #     # echo ${{ true >= true }}
+    #     # echo ${{ cOnTaInS('Hello', 'll') }}
+    #     # echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
+    #     # echo ${{ format('{0', '{1}', 'World') }} 
+    #     # echo ${{ 9223372036854775807 }}
+    #     # echo ${{ 2147483647 }}
+    #     # echo ${{ 12345678901234567890.0 }}
+    #     # echo ${{ 1e3 }}
+    #     # echo ${{ 12e3 }}
+    #     # echo ${{ 0e3 }}
+    #     # echo ${{ format('{0} {1} {2} {3}', 1.0, 1.1, 1234567890.0, 12345678901234567890.0) }}
+    #     # echo ${{ 9223372036854775807 }}
+    #     # echo ${{ 0.0 }}
+    #     # echo ${{ true && 0.0 }}
+    #     # echo ${{ 10.0 }}
+    #     # echo ${{ 0.0 }}
+    #     # echo ${{ true && NaN }}
+    #     # echo ${{ true && 0.0 }} 
+    #     # echo ${{ env.nonascii }}
+    #     # echo ${{ true && 10.0 }}
+    #     # echo ${{ contains(fromJSON('[null,"second"]'), '') }}
+    #     # echo ${{ contains('123', '') }}
+    #     echo ${{ format('Hello "{0}" {1} {2} {3} {4}', null, true, -3.14, NaN, Infinity) }}
