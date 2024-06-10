@@ -12,6 +12,19 @@
             "message": 5
           }
         ]
+      },
+      {
+        "owner": "json-validator",
+        "pattern": [
+          {
+            "regexp": "^(ERROR|WARN|INFO):\\s(.+):(\\d+):(\\d+):\\s(.+)$",
+            "severity": 1,
+            "file": 2,
+            "line": 3,
+            "column": 4,
+            "message": 5
+          }
+        ]
       }
     ]
   }
